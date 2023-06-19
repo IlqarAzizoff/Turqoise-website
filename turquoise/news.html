@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Turquoise</title>
+        <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.ico" />
+        <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+        <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-progressbar-3.3.4.css" />
+        <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <!-- BEGAIN PRELOADER -->
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>
+        <!-- END PRELOADER -->
+
+        <!-- SCROLL TOP BUTTON -->
+        <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+        <!-- END SCROLL TOP BUTTON -->
+
+        <!-- Start header -->
+        <header id="header">
+            <!-- header top search -->
+            <div class="header-top">
+                <div class="container">
+                    <form action="">
+                        <div id="search">
+                            <input type="text" placeholder="Axtarış açar sözünüzü buraya yazın və axtarış düyməsini basın..." name="s" id="m_search" style="display: inline-block;" />
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- header bottom -->
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-8">
+                            <div class="header-contact social-icon">
+								<a href="#" class="fb"><i class="fa fa-facebook"></i></a>
+								<a href="#" class="li"><i class="fa fa-linkedin"></i></a>
+								<a href="#" class="in"><i class="fa fa-instagram"></i></a>
+								<a href="#" class="wa"><i class="fa fa-whatsapp"></i></a>
+								<a href="#" class="ma"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+						<div class="col-md-4 col-sm-4 col-xs-4">
+                            <div class="header-lang">
+                                <ul>
+                                    <li>
+                                        <a href="#">EN</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">AZ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        <!-- Start login modal window -->
+        <div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">
+            <div class="modal-dialog">
+                <!-- Start login section -->
+                <div id="login-content" class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="User name" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Password" class="form-control" />
+                            </div>
+                            <div class="loginbox">
+                                <label><input type="checkbox" /><span>Remember me</span></label>
+                                <button class="btn signin-btn" type="button">SIGN IN</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer footer-box">
+                        <a href="#">Forgot password ?</a>
+                        <span>No account ? <a id="signup-btn" href="#">Sign Up.</a></span>
+                    </div>
+                </div>
+                <!-- Start signup section -->
+                <div id="signup-content" class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title"><i class="fa fa-lock"></i>Sign Up</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input placeholder="Name" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input placeholder="Username" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input placeholder="Email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Password" class="form-control" />
+                            </div>
+                            <div class="signupbox">
+                                <span>Already got account? <a id="login-btn" href="#">Sign In.</a></span>
+                            </div>
+                            <div class="loginbox">
+                                <label><input type="checkbox" /><span>Remember me</span><i class="fa"></i></label>
+                                <button class="btn signin-btn" type="button">SIGN UP</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End login modal window -->
+
+        <!-- BEGIN MENU -->
+        <section id="menu-area">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+						<ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+							<li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Haqqımızda <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="history.html">Tarixçə</a></li>
+                                    <li><a href="srspblty.html">Korporativ və Sosial cavabdehlik</a></li>
+                                    <li><a href="news.html">Xəbərlər</a></li>
+                                    <li><a href="scesstries.html">Uğur hekayələrimiz</a></li>
+                                    <li><a href="vacancy.html">Vakansiyalarımız</a></li>
+                                    <li><a href="ourteam.html">Komandamız</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Məhsullar <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="product.html">Kimyəvi Reagentlər</a></li>
+                                    <li><a href="product.html">Döşəmə Betonu</a></li>
+                                    <li><a href="product.html">İnşaat Kimyəviləri</a></li>
+                                    <li><a href="product.html">Profil, Divar Qoruma</a></li>
+                                    <li><a href="product.html">Nəfəs alan Fasad və Dam Membranları</a></li>
+                                    <li><a href="product.html">Havalandırma Fanları</a></li>
+                                    <li><a href="product.html">Müxtəlif İnşaat Materialları</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="service.html">Xidmətlər</a></li>
+                            <li><a href="project.html">Layihələr</a></li>
+                            <li><a href="partner.html">Təmsil etdiyimiz Markalar</a></li>
+							<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Texniki dəstək<span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="questions.html">Tez-tez verilən suallar</a></li>
+                                    <li><a href="catalog.html">Məhsul kataloqları</a></li>
+                                    <li><a href="certificate.html">Sertifikatlarımız</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Əlaqə</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                    <a href="#" id="search-icon">
+                        <i class="fa fa-search"> </i>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <!-- END MENU -->
+
+        <!-- Start single page header -->
+        <section id="single-page-header">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="single-page-header-left">
+                                <h2>Xəbərlər</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="single-page-header-right">
+                                <ol class="breadcrumb">
+                                    <li><a href="index.html">Ana səhifə</a></li>
+                                    <li class="active">Xəbərlər</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End single page header -->
+
+        <!-- Start blog archive -->
+        <section id="blog-archive">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="blog-archive-area">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="latest-news-content">
+										<div class="row">
+											<!-- start single latest news -->
+											<div class="col-md-4">
+												<article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="newsmore.html"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="newsmore.html">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+											<!-- start single latest news -->
+											<div class="col-md-4">
+												<article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="newsmore.html"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="newsmore.html">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+											<!-- start single latest news -->
+											<div class="col-md-4">
+											   <article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="#"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="#">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+											<!-- start single latest news -->
+											<div class="col-md-4">
+											   <article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="#"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="#">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+											<!-- start single latest news -->
+											<div class="col-md-4">
+											   <article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="#"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="#">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+											<!-- start single latest news -->
+											<div class="col-md-4">
+											   <article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="#"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="#">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+											<!-- start single latest news -->
+											<div class="col-md-4">
+											   <article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="#"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="#">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+											<!-- start single latest news -->
+											<div class="col-md-4">
+											   <article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="#"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="#">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+											<!-- start single latest news -->
+											<div class="col-md-4">
+											   <article class="blog-news-single">
+													<div class="blog-news-img">
+														<a href="#"><img src="assets/images/blog-img-1.jpg" alt="image" /></a>
+													</div>
+													<div class="blog-news-title">
+														<h2><a href="#">Lorem Ipsum</a></h2>
+														<p><span class="blog-date">18 oktyabr 2023</span></p>
+													</div>
+													<div class="blog-news-details">
+														<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+														<a class="blog-more-btn" href="#">Ətraflı <i class="fa fa-long-arrow-right"></i></a>
+													</div>
+												</article>
+											</div>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End blog archive -->
+
+        <!-- Start subscribe us -->
+        <section id="subscribe">
+            <div class="subscribe-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="subscribe-area">
+                                <h2 class="wow fadeInUp">ABUNƏ OLUN</h2>
+                                <form action="" class="subscrib-form wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                                    <input type="text" placeholder="E-mail adresini daxil et.." />
+                                    <button class="subscribe-btn" type="submit">ABUNƏ OL</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End subscribe us -->
+<section id="contactindex">
+            <div class="subscribe-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+							<div class="single-table-contact wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+								<div class="price-contact">
+									<ul>
+										<li>Ünvan</li>
+										<li>"TURQUOISE" MMC Hökməli qəsəbəsi, Bakı-Şamaxı yolu, 16-cı km</li>
+									</ul>
+								</div>
+							</div>
+                        </div>
+						<div class="col-md-4">
+							<div class="single-table-contact wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+								<div class="price-contact">
+									<ul>
+										<li>Telefon</li>
+										<li>
+											+99412 341 03 73 / 74<br />
+											+99470 224 80 59
+										</li>
+									</ul>
+								</div>
+							</div>
+                        </div>
+						<div class="col-md-4">
+							<div class="single-table-contact wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+								<div class="price-contact">
+									<ul>
+										<li>Email</li>
+										<li>adm@turquoise-az.com</li>
+									</ul>
+								</div>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End subscribe us
+		
+         Start footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="footer-left">
+                            <p>Copyright © 2023 <a href="#" target="_blank">www.turquoise-az.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <!-- Bootstrap -->
+        <script src="assets/js/bootstrap.js"></script>
+        <!-- Slick Slider -->
+        <script type="text/javascript" src="assets/js/slick.js"></script>
+        <!-- mixit slider -->
+        <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
+        <!-- Add fancyBox -->
+        <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+        <!-- counter -->
+        <script src="assets/js/waypoints.js"></script>
+        <script src="assets/js/jquery.counterup.js"></script>
+        <!-- Wow animation -->
+        <script type="text/javascript" src="assets/js/wow.js"></script>
+        <!-- progress bar   -->
+        <script type="text/javascript" src="assets/js/bootstrap-progressbar.js"></script>
+
+        <!-- Custom js -->
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+    </body>
+</html>
